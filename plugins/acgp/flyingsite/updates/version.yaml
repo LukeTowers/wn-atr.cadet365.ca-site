@@ -1,0 +1,7 @@
+1.0.1:
+    - 'Initialize plugin.'
+    - create_regions.php
+    - create_sites.php
+1.0.2:
+    - 'Created table acgp_flyingsite_members'
+    - builder_table_create_acgp_flyingsite_members.php

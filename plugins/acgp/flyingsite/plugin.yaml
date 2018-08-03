@@ -1,0 +1,6 @@
+plugin:
+    name: 'acgp.flyingsite::lang.plugin.name'
+    description: 'acgp.flyingsite::lang.plugin.description'
+    author: 'Air Cadet Gliding Program'
+    icon: oc-icon-plane
+    homepage: 'https://cadetflying.site'

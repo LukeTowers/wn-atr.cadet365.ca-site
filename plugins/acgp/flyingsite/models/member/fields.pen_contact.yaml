@@ -1,4 +1,7 @@
 fields:
+    _title:
+        label: acgp.flyingsite::lang.models.member.contact.label
+        type: section
     given_names:
         label: acgp.flyingsite::lang.models.member.given_names
         type: text
@@ -15,9 +18,9 @@ fields:
         span: full
         required: true
         options:
-            - Mr
-            - Mrs
-            - Miss
+            mr: acgp.flyingsite::lang.models.general.mr
+            mrs: acgp.flyingsite::lang.models.general.mrs
+            miss: acgp.flyingsite::lang.models.general.mr
     address:
         label: acgp.flyingsite::lang.models.general.address.label
         type: textarea

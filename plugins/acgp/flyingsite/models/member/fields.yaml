@@ -70,13 +70,94 @@ tabs:
             default: Canada
             span: right
 
-        sensitive_data[pen][nok]:
+        _section_nok:
             label: acgp.flyingsite::lang.models.member.pen.nok
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: section
+        sensitive_data[pen][nok]:
+            label: ''
             tab: acgp.flyingsite::lang.models.member.pen.label
             type: repeater
             form: $/acgp/flyingsite/models/member/fields.pen_contact.yaml
             prompt: acgp.flyingsite::lang.models.member.pen.add_nok
             maxItems: 2
+
+        _section_pen_contact:
+            label: acgp.flyingsite::lang.models.member.pen.pen_contact
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: section
+        sensitive_data[pen][pen_contact_choice]:
+            label: ''
+            commentAbove: acgp.flyingsite::lang.models.member.pen.pen_contact_desc
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: checkboxlist
+            span: left
+            options:
+                same_1: acgp.flyingsite::lang.models.member.pen.same_1
+                same_2: acgp.flyingsite::lang.models.member.pen.same_2
+        _pen_contact_alt:
+            label: acgp.flyingsite::lang.models.member.pen.or
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: checkbox
+            span: right
+        sensitive_data[pen][pen_contact]:
+            label: ''
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: repeater
+            form: $/acgp/flyingsite/models/member/fields.pen_contact.yaml
+            prompt: acgp.flyingsite::lang.models.member.pen.add_pen_contact
+            maxItems: 1
+            trigger:
+                action: show
+                field: _pen_contact_alt
+                condition: checked
+
+        _section_authorized_contact:
+            label: acgp.flyingsite::lang.models.member.pen.authorized_contact
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: section
+        sensitive_data[pen][authorized_contact_choice]:
+            label: ''
+            commentAbove: acgp.flyingsite::lang.models.member.pen.authorized_contact_desc
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: checkboxlist
+            span: full
+            options:
+                same_1: acgp.flyingsite::lang.models.member.pen.same_1
+                same_2: acgp.flyingsite::lang.models.member.pen.same_2
+                same_3: acgp.flyingsite::lang.models.member.pen.same_3
+                or: acgp.flyingsite::lang.models.member.pen.or
+                and: acgp.flyingsite::lang.models.member.pen.and
+        sensitive_data[pen][authorized_contact]:
+            label: ''
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: repeater
+            form: $/acgp/flyingsite/models/member/fields.pen_contact.yaml
+            prompt: acgp.flyingsite::lang.models.member.pen.add_authorized_contact
+            maxItems: 1
+
+        _section_authorization:
+            label: acgp.flyingsite::lang.models.member.pen.authorization_section
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: section
+        sensitive_data[pen][authority_to_release]:
+            label: acgp.flyingsite::lang.models.member.pen.authority_to_release
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: switch
+            span: full
+            on: acgp.flyingsite::lang.models.general.yes
+            off: acgp.flyingsite::lang.models.general.no
+
+        _section_remarks:
+            label: acgp.flyingsite::lang.models.member.pen.remarks
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: section
+        sensitive_data[pen][remarks]:
+            label: ''
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: textarea
+            size: tiny
+            span: full
 
 secondaryTabs:
     fields:

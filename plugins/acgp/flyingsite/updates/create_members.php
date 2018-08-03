@@ -11,7 +11,7 @@ class CreateMembers extends Migration
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('site_id')->unsigned();
+            $table->integer('site_id')->unsigned()->nullable();
             $table->string('surname');
             $table->string('given_names');
             $table->string('type');

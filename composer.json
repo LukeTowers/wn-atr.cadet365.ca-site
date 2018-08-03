@@ -17,7 +17,9 @@
         "october/system": "dev-develop",
         "october/backend": "dev-develop",
         "laravel/framework": "5.5.*@dev",
-        "wikimedia/composer-merge-plugin": "dev-master"
+        "wikimedia/composer-merge-plugin": "dev-master",
+
+        "rainlab/location-plugin": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.7",

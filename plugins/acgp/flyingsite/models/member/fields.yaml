@@ -1,0 +1,123 @@
+fields:
+    given_names:
+        label: acgp.flyingsite::lang.models.member.given_names
+        span: left
+        type: text
+    surname:
+        label: acgp.flyingsite::lang.models.member.surname
+        span: right
+        type: text
+
+tabs:
+    defaultTab: acgp.flyingsite::lang.models.member.tab_general
+    fields:
+        contact_data[email]:
+            label: acgp.flyingsite::lang.models.member.contact.email
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: address@example.com
+            type: text
+            span: left
+        contact_data[phone]:
+            label: acgp.flyingsite::lang.models.member.contact.phone
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: '1 (306) 555-5555'
+            type: text
+            span: right
+
+        _heading_address:
+            label: acgp.flyingsite::lang.models.general.address.label
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            type: section
+        _address:
+            label: acgp.flyingsite::lang.models.general.address.finder
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            span: full
+            type: addressfinder
+            fieldMap:
+                street: contact_data[address][line_1]
+                city: contact_data[address][city]
+                zip: contact_data[address][postalcode]
+                state: contact_data[address][province]
+                country: contact_data[address][country]
+        contact_data[address][line_1]:
+            label: acgp.flyingsite::lang.models.general.address.line_1
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: '1 Workshop Lane'
+            type: text
+            span: full
+        contact_data[address][city]:
+            label: acgp.flyingsite::lang.models.general.address.city
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: 'North Pole'
+            type: text
+            span: left
+        contact_data[address][postalcode]:
+            label: acgp.flyingsite::lang.models.general.address.postcode
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: 'H0H 0H0'
+            type: text
+            span: right
+        contact_data[address][province]:
+            label: acgp.flyingsite::lang.models.general.address.region
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            placeholder: 'Yukon'
+            type: text
+            span: left
+        contact_data[address][country]:
+            label: acgp.flyingsite::lang.models.general.address.country
+            tab: acgp.flyingsite::lang.models.member.contact.label
+            type: text
+            default: Canada
+            span: right
+
+        sensitive_data[pen][nok]:
+            label: acgp.flyingsite::lang.models.member.pen.nok
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            type: repeater
+            form: $/acgp/flyingsite/models/member/fields.pen_contact.yaml
+            prompt: acgp.flyingsite::lang.models.member.pen.add_nok
+            maxItems: 2
+
+secondaryTabs:
+    fields:
+        photo:
+            label: acgp.flyingsite::lang.models.member.photo
+            type: fileupload
+            mode: image
+            useCaption: false
+            imageHeight: 250
+            imageWidth: 250
+            mimeTypes: gif,png,bmp,jpg,jpeg
+
+        type:
+            label: acgp.flyingsite::lang.models.member.type.label
+            type: dropdown
+            span: left
+            options:
+                cadet: acgp.flyingsite::lang.models.member.type.cadet
+                coats: acgp.flyingsite::lang.models.member.type.coats
+                ci: acgp.flyingsite::lang.models.member.type.ci
+                cv: acgp.flyingsite::lang.models.member.type.cv
+                regf: acgp.flyingsite::lang.models.member.type.regf
+                resf: acgp.flyingsite::lang.models.member.type.resf
+
+        rank:
+            label: acgp.flyingsite::lang.models.member.rank.label
+            type: dropdown
+            dependsOn: type
+            span: right
+
+        sensitive_data[unit]:
+            label: acgp.flyingsite::lang.models.member.sensitive.unit
+            placeholder: '#1 Best Unit RCACS'
+            type: text
+
+        sensitive_data[sn]:
+            label: acgp.flyingsite::lang.models.member.sensitive.sn
+            placeholder: 'A12345678'
+            type: text
+
+        date_of_birth:
+            label: acgp.flyingsite::lang.models.member.dob
+            type: datepicker
+            mode: date

@@ -1,0 +1,10 @@
+name: acgp.flyingsite::lang.models.member.label
+form: $/acgp/flyingsite/models/member/fields.yaml
+modelClass: ACGP\FlyingSite\Models\Member
+defaultRedirect: acgp/flyingsite/members
+create:
+    redirect: 'acgp/flyingsite/members/update/:id'
+    redirectClose: acgp/flyingsite/members
+update:
+    redirect: acgp/flyingsite/members
+    redirectClose: acgp/flyingsite/members

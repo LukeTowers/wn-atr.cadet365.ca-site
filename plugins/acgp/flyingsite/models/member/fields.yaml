@@ -80,7 +80,12 @@ tabs:
             type: repeater
             form: $/acgp/flyingsite/models/member/fields.pen_contact.yaml
             prompt: acgp.flyingsite::lang.models.member.pen.add_nok
+            minItems: 2
             maxItems: 2
+
+
+        pen_form:
+            label: 'test'
 
         _section_pen_contact:
             label: acgp.flyingsite::lang.models.member.pen.pen_contact

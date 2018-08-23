@@ -229,16 +229,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.7.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a"
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b3217d58609e9c8e661cd41357a54d926c4a2a1a",
-                "reference": "b3217d58609e9c8e661cd41357a54d926c4a2a1a",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/d768d58baee9a4862ca783840eca1b9add7a7f57",
+                "reference": "d768d58baee9a4862ca783840eca1b9add7a7f57",
                 "shasum": ""
             },
             "require": {
@@ -249,8 +249,9 @@
             },
             "require-dev": {
                 "alcaeus/mongo-php-adapter": "^1.1",
+                "doctrine/coding-standard": "^4.0",
                 "mongodb/mongodb": "^1.1",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "^7.0",
                 "predis/predis": "~1.0"
             },
             "suggest": {
@@ -259,7 +260,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.8.x-dev"
                 }
             },
             "autoload": {
@@ -294,12 +295,12 @@
                 }
             ],
             "description": "Caching library offering an object-oriented API for many cache backends",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "cache",
                 "caching"
             ],
-            "time": "2017-08-25T07:02:50+00:00"
+            "time": "2018-08-21T18:01:43+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -635,16 +636,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3"
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/8790f594151ca6a2010c6218e09d96df67173ad3",
-                "reference": "8790f594151ca6a2010c6218e09d96df67173ad3",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/54859fabea8b3beecbb1a282888d5c990036b9e3",
+                "reference": "54859fabea8b3beecbb1a282888d5c990036b9e3",
                 "shasum": ""
             },
             "require": {
@@ -688,7 +689,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-04-10T10:11:19+00:00"
+            "time": "2018-08-16T20:49:45+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -1317,16 +1318,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.45",
+            "version": "1.0.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6"
+                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
-                "reference": "a99f94e63b512d75f851b181afcdf0ee9ebef7e6",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
+                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
                 "shasum": ""
             },
             "require": {
@@ -1338,7 +1339,7 @@
             "require-dev": {
                 "ext-fileinfo": "*",
                 "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.7.10"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -1397,7 +1398,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-05-07T08:44:23+00:00"
+            "time": "2018-08-22T07:45:22+00:00"
         },
         {
             "name": "linkorb/jsmin-php",
@@ -1690,12 +1691,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/backend.git",
-                "reference": "8285fc03650e491e0d6bca95e8f047efb41b8939"
+                "reference": "ae2e4f9563049ddff30f6a7dab9d4053668d2088"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/backend/zipball/8285fc03650e491e0d6bca95e8f047efb41b8939",
-                "reference": "8285fc03650e491e0d6bca95e8f047efb41b8939",
+                "url": "https://api.github.com/repos/octoberrain/backend/zipball/ae2e4f9563049ddff30f6a7dab9d4053668d2088",
+                "reference": "ae2e4f9563049ddff30f6a7dab9d4053668d2088",
                 "shasum": ""
             },
             "require": {
@@ -1741,7 +1742,7 @@
                 "october",
                 "october cms"
             ],
-            "time": "2018-08-12T02:27:53+00:00"
+            "time": "2018-08-21T03:24:59+00:00"
         },
         {
             "name": "october/rain",
@@ -1749,12 +1750,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/octobercms/library.git",
-                "reference": "c8e2740d974a4409f9990d64f19ef493acf7c0e6"
+                "reference": "fc8cd3e6d6aba36e60787c006774215d5b3582a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octobercms/library/zipball/c8e2740d974a4409f9990d64f19ef493acf7c0e6",
-                "reference": "c8e2740d974a4409f9990d64f19ef493acf7c0e6",
+                "url": "https://api.github.com/repos/octobercms/library/zipball/fc8cd3e6d6aba36e60787c006774215d5b3582a8",
+                "reference": "fc8cd3e6d6aba36e60787c006774215d5b3582a8",
                 "shasum": ""
             },
             "require": {
@@ -1839,7 +1840,7 @@
                 "october",
                 "rain"
             ],
-            "time": "2018-08-09T14:58:55+00:00"
+            "time": "2018-08-21T04:32:05+00:00"
         },
         {
             "name": "october/system",
@@ -1847,12 +1848,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/octoberrain/system.git",
-                "reference": "1e170d3f6d2f28fa377fdeeec3da6d33c376ded2"
+                "reference": "48e15fa0521235a603b2c37d11ed3ac0cd94bf1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/octoberrain/system/zipball/1e170d3f6d2f28fa377fdeeec3da6d33c376ded2",
-                "reference": "1e170d3f6d2f28fa377fdeeec3da6d33c376ded2",
+                "url": "https://api.github.com/repos/octoberrain/system/zipball/48e15fa0521235a603b2c37d11ed3ac0cd94bf1f",
+                "reference": "48e15fa0521235a603b2c37d11ed3ac0cd94bf1f",
                 "shasum": ""
             },
             "require": {
@@ -1898,7 +1899,7 @@
                 "october cms",
                 "system"
             ],
-            "time": "2018-08-09T13:39:37+00:00"
+            "time": "2018-08-21T03:24:59+00:00"
         },
         {
             "name": "oyejorge/less.php",

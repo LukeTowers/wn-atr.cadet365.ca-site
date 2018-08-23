@@ -280,6 +280,17 @@ class Member extends Model
                     $general['component'] = 'civilian';
                     break;
             }
+            $data['general'] = $general;
+
+            // 1. Primary Next of Kin
+            $data['primary'] = $this->sensitive_data['pen']['nok'][0];
+
+            // 2. Secondary Next of Kin
+            $data['secondary'] = $this->sensitive_data['pen']['nok'][1];
+
+            // 3. PEN Contact
+            $data['pen_contact'] = $this->sensitive_data['pen']['pen_contact'][0];
+            // TODO: $data['contact_choice'] =
 
             // 5. Authority to release / exchange information
             $data['authority_to_release'] = [
@@ -305,6 +316,7 @@ class Member extends Model
                     'date_of_birth' => $this->date_of_birth,
                 ];
             }
+            $data['reserve_force'] = $reserve;
 
             // 7. Remarks
             $data['remarks']['remarks'] = $this->sensitive_data['pen']['remarks'];
@@ -317,45 +329,11 @@ class Member extends Model
                 'witness_signature_date' => '', // TODO: should we insert dates?
             ];
 
+
+            dd($data);
+
 $data = [
- 'primary' => [
-     'honorific'   => [
-         'key'  => '1_honorific',
-         'mr'   => '1_mr',
-         'mrs'  => '1_mrs',
-         'miss' => '1_miss',
-     ],
-     'surname'     => '1_surname',
-     'given_names' => '1_given_names',
-     'address'     => '1_address',
-     'postcode'    => '1_postcode',
-     'relationship' => '1_relationship',
-     'language'     => '1_language',
-     'religion'     => '1_religion',
-     'home_area'    => '1_home_area',
-     'home_number'  => '1_home_number',
-     'office_area'  => '1_office_area',
-     'office_number' => '1_office_number',
- ],
- 'secondary' => [
-     'honorific'   => [
-         'key'  => '2_honorific',
-         'mr'   => '2_mr',
-         'mrs'  => '2_mrs',
-         'miss' => '2_miss',
-     ],
-     'surname'     => '2_surname',
-     'given_names' => '2_given_names',
-     'address'     => '2_address',
-     'postcode'    => '2_postcode',
-     'relationship' => '2_relationship',
-     'language'     => '2_language',
-     'religion'     => '2_religion',
-     'home_area'    => '2_home_area',
-     'home_number'  => '2_home_number',
-     'office_area'  => '2_office_area',
-     'office_number' => '2_office_number',
- ],
+
  'pen_contact' => [
      'contact_choice' => [
          'key'    => '3_contact_choice',

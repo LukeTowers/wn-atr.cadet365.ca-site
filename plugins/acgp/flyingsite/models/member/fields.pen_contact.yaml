@@ -41,12 +41,27 @@ fields:
         label: acgp.flyingsite::lang.models.member.pen.religion
         span: right
         type: text
-    phone_home:
-        label: acgp.flyingsite::lang.models.member.pen.phone_home
+    home_area:
+        label: acgp.flyingsite::lang.models.member.pen.home_area
         type: text
-        span: left
-        required: true
-    phone_work:
-        label: acgp.flyingsite::lang.models.member.pen.phone_work
+        cssClass: 'col-sm-2'
+        placeholder: 306
+        span: none
+    home_number:
+        label: acgp.flyingsite::lang.models.member.pen.home_number
         type: text
-        span: right
+        cssClass: 'col-sm-4'
+        placeholder: 555-5555
+        span: none
+    office_area:
+        label: acgp.flyingsite::lang.models.member.pen.office_area
+        type: text
+        cssClass: 'col-sm-2'
+        placeholder: 306
+        span: none
+    office_number:
+        label: acgp.flyingsite::lang.models.member.pen.office_number
+        type: text
+        cssClass: 'col-sm-4'
+        placeholder: 555-5555
+        span: none

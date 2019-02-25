@@ -1,7 +1,9 @@
-columns:
+fields:
     name:
         label: acgp.flyingsite::lang.models.general.name
         type: text
+        span: left
     code:
         label: acgp.flyingsite::lang.models.general.code
         type: text
+        span: right

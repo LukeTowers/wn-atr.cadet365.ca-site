@@ -19,6 +19,8 @@
             'mr'          => 'Mr',
             'mrs'         => 'Mrs',
             'miss'        => 'Miss',
+            'name'        => 'Name',
+            'code'        => 'Code',
             'address' => [
                 'finder'   => 'Address Lookup',
                 'label'    => 'Address',
@@ -48,7 +50,6 @@
             'label_plural' => 'Members',
             'surname'      => 'Surname',
             'given_names'  => 'Given Name(s)',
-            'photo'        => 'Photo',
             'dob'          => 'Date of Birth',
             'tab_general'  => 'General Information',
             'sensitive' => [
@@ -119,6 +120,13 @@
                 'lcol'     => 'Lieutenant Colonel',
                 'col'      => 'Colonel',
             ],
+            'placeholder' => [
+                'given_names' => 'Joe',
+                'surname'     => 'Bloggins',
+                'address'     => '#123 - 1300 Main St., Regina, SK',
+                'postcode'    => 'H0H 0H0',
+                'relationship' => 'Spouse',
+            ]
         ],
     ],
 ];

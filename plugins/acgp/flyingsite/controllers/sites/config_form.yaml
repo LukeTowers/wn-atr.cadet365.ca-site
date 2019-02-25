@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Site
+
+# Model Form Field configuration
+form: $/acgp/flyingsite/models/site/fields.yaml
+
+# Model Class name
+modelClass: ACGP\FlyingSite\Models\Site
+
+# Default redirect location
+defaultRedirect: acgp/flyingsite/sites
+
+# Create page
+create:
+    title: Create Site
+    redirect: acgp/flyingsite/sites/update/:id
+    redirectClose: acgp/flyingsite/sites
+
+# Update page
+update:
+    title: Edit Site
+    redirect: acgp/flyingsite/sites
+    redirectClose: acgp/flyingsite/sites
+
+# Preview page
+preview:
+    title: Preview Site

@@ -15,3 +15,15 @@ navigation:
         icon: icon-users
         permissions:
             - manage_members
+    acgp-regions:
+        label: 'acgp.flyingsite::lang.models.region.label_plural'
+        url: acgp/flyingsite/regions
+        icon: icon-map
+        permissions:
+            - regions.*
+    acgp-sites:
+        label: 'acgp.flyingsite::lang.models.site.label_plural'
+        url: acgp/flyingsite/sites
+        icon: icon-map-marker
+        permissions:
+            - sites.*

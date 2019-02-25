@@ -70,25 +70,14 @@ tabs:
             default: Canada
             span: right
 
-        _pen_form_btn:
-            label: ''
-            type: partial
-            path: $/acgp/flyingsite/models/member/btn.pen.htm
-
         pen_form:
-            label: 'test'
+            type: nestedform
+            usePanelStyle: false
+            tab: acgp.flyingsite::lang.models.member.pen.label
+            form: $/acgp/flyingsite/models/member/fields.pen_form.yaml
 
 secondaryTabs:
     fields:
-        photo:
-            label: acgp.flyingsite::lang.models.member.photo
-            type: fileupload
-            mode: image
-            useCaption: false
-            imageHeight: 250
-            imageWidth: 250
-            mimeTypes: gif,png,bmp,jpg,jpeg
-
         type:
             label: acgp.flyingsite::lang.models.member.type.label
             type: dropdown
@@ -120,4 +109,5 @@ secondaryTabs:
         date_of_birth:
             label: acgp.flyingsite::lang.models.member.dob
             type: datepicker
+            ignoreTimezone: true
             mode: date

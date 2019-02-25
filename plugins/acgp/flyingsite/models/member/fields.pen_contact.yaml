@@ -6,17 +6,16 @@ fields:
         label: acgp.flyingsite::lang.models.member.given_names
         type: text
         span: left
-        required: true
+        placeholder: acgp.flyingsite::lang.models.member.placeholder.given_names
     surname:
         label: acgp.flyingsite::lang.models.member.surname
         type: text
         span: right
-        required: true
+        placeholder: acgp.flyingsite::lang.models.member.placeholder.surname
     honorific:
         label: acgp.flyingsite::lang.models.member.pen.honorific
         type: balloon-selector
         span: full
-        required: true
         options:
             mr: acgp.flyingsite::lang.models.general.mr
             mrs: acgp.flyingsite::lang.models.general.mrs
@@ -26,17 +25,17 @@ fields:
         type: textarea
         size: tiny
         span: left
-        required: true
+        placeholder: acgp.flyingsite::lang.models.member.placeholder.address
     postcode:
         label: acgp.flyingsite::lang.models.general.address.postcode
         type: text
         span: right
-        required: true
+        placeholder: acgp.flyingsite::lang.models.member.placeholder.postcode
     relationship:
         label: acgp.flyingsite::lang.models.member.pen.relationship
         type: text
         span: left
-        required: true
+        placeholder: acgp.flyingsite::lang.models.member.placeholder.relationship
     religion:
         label: acgp.flyingsite::lang.models.member.pen.religion
         span: right

@@ -1,13 +1,16 @@
 columns:
     name:
-        label: Name
+        label: acgp.flyingsite::lang.models.general.name
         type: text
         searchable: true
         sortable: true
     region_name:
-        label: Region
+        label: acgp.flyingsite::lang.models.region.label
         type: text
         searchable: true
         sortable: true
         select: name
         relation: region
+    code:
+        label: acgp.flyingsite::lang.models.general.code
+        type: text

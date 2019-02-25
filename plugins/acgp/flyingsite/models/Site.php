@@ -24,4 +24,11 @@ class Site extends Model
      * @var array List of attributes to automatically generate unique URL names (slugs) for.
      */
     protected $slugs = ['code' => 'name'];
+
+    /**
+     * Relations
+     */
+    public $belongsTo = [
+        'region' => [Region::class],
+    ];
 }

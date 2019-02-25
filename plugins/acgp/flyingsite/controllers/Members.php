@@ -27,6 +27,13 @@ class Members extends Controller
     }
 
 
+    public function update($id)
+    {
+        $this->initPENForm($id);
+        return $this->asExtension('FormController')->update($id);
+    }
+
+
     /**
      * @var FormWidget The FormWidget instance used for the PEN form
      */
@@ -45,20 +52,33 @@ class Members extends Controller
         }
 
         $config = $this->makeConfig("$/acgp/flyingsite/models/member/fields.pen_form.yaml");
-        $config->model = $member;
-        $config->arrayName = class_basename($member);
+        $member->pen_form->rules = $member->pen_form->penRules;
+        $config->model = $member->pen_form;
+        $config->arrayName = class_basename($member->pen_form);
         $config->context = 'view';
 
         $this->penFormWidget = $this->makeWidget(FormWidget::class, $config);
         $this->penFormWidget->bindToController();
+        $this->vars['penFormWidget'] = $this->penFormWidget;
     }
 
-    public function onLoadPENForm($id = null)
+    public function update_onLoadPENForm()
     {
-        $this->initPENForm($id);
-
-        $this->vars['penFormWidget'] = $this->penFormWidget;
-
+        $this->pageAction();
         return $this->makePartial('form_pen');
+    }
+
+    public function update_onSavePENForm()
+    {
+        $this->pageAction();
+        $data = $this->penFormWidget->getSaveData();
+        $model = $this->penFormWidget->model;
+        foreach ($data as $attribute => $value) {
+            if (is_array($value)) {
+                $value = array_merge((array) $model->{$attribute}, $value);
+            }
+            $model->{$attribute} = $value;
+        }
+        $model->save();
     }
 }

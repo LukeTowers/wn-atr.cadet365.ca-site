@@ -5,42 +5,11 @@ use System\Classes\CombineAssets;
 
 class CombineAssetsTest extends TestCase
 {
-    public function setUp()
+    public function setUp() : void
     {
         parent::setUp();
 
         CombineAssets::resetCache();
-    }
-
-    //
-    // Helpers
-    //
-
-    protected static function callProtectedMethod($object, $name, $params = [])
-    {
-        $className = get_class($object);
-        $class = new ReflectionClass($className);
-        $method = $class->getMethod($name);
-        $method->setAccessible(true);
-        return $method->invokeArgs($object, $params);
-    }
-
-    public static function getProtectedProperty($object, $name)
-    {
-        $className = get_class($object);
-        $class = new ReflectionClass($className);
-        $property = $class->getProperty($name);
-        $property->setAccessible(true);
-        return $property->getValue($object);
-    }
-
-    public static function setProtectedProperty($object, $name, $value)
-    {
-        $className = get_class($object);
-        $class = new ReflectionClass($className);
-        $property = $class->getProperty($name);
-        $property->setAccessible(true);
-        return $property->setValue($object, $value);
     }
 
     //
@@ -55,10 +24,10 @@ class CombineAssetsTest extends TestCase
          * Supported file extensions should exist
          */
         $jsExt = $cssExt = self::getProtectedProperty($combiner, 'jsExtensions');
-        $this->assertInternalType('array', $jsExt);
+        $this->assertIsArray($jsExt);
 
         $cssExt = self::getProtectedProperty($combiner, 'cssExtensions');
-        $this->assertInternalType('array', $cssExt);
+        $this->assertIsArray($cssExt);
 
         /*
          * Check service methods
@@ -71,7 +40,8 @@ class CombineAssetsTest extends TestCase
     {
         $combiner = CombineAssets::instance();
 
-        $url = $combiner->combine([
+        $url = $combiner->combine(
+            [
                 'assets/css/style1.css',
                 'assets/css/style2.css'
             ],
@@ -80,9 +50,10 @@ class CombineAssetsTest extends TestCase
         $this->assertNotNull($url);
         $this->assertRegExp('/\w+[-]\d+/i', $url); // Must contain hash-number
 
-        $url = $combiner->combine([
-            'assets/js/script1.js',
-            'assets/js/script2.js'
+        $url = $combiner->combine(
+            [
+                'assets/js/script1.js',
+                'assets/js/script2.js'
             ],
             base_path().'/tests/fixtures/themes/test'
         );
@@ -130,5 +101,4 @@ class CombineAssetsTest extends TestCase
         $combiner = CombineAssets::instance();
         $this->assertNull($combiner->resetCache());
     }
-
 }

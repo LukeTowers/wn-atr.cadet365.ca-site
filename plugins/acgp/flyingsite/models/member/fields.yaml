@@ -76,8 +76,20 @@ tabs:
             tab: acgp.flyingsite::lang.models.member.pen.label
             form: $/acgp/flyingsite/models/member/fields.pen_form.yaml
 
+        activities:
+            tab: Audit Log
+            type: activitylog
+            context: [update, preview]
+            span: full
+
 secondaryTabs:
     fields:
+        picture:
+            label: acgp.flyingsite::lang.models.member.picture
+            type: fileupload
+            mode: image
+            span: full
+
         type:
             label: acgp.flyingsite::lang.models.member.type.label
             type: dropdown
@@ -90,11 +102,22 @@ secondaryTabs:
                 regf: acgp.flyingsite::lang.models.member.type.regf
                 resf: acgp.flyingsite::lang.models.member.type.resf
 
+        element:
+            label: acgp.flyingsite::lang.models.member.element.label
+            type: dropdown
+            span: right
+            options:
+                air: acgp.flyingsite::lang.models.member.element.air
+                army: acgp.flyingsite::lang.models.member.element.army
+                sea: acgp.flyingsite::lang.models.member.element.sea
+
         rank:
             label: acgp.flyingsite::lang.models.member.rank.label
             type: dropdown
-            dependsOn: type
-            span: right
+            dependsOn:
+                - type
+                - element
+            span: full
 
         sensitive_data[unit]:
             label: acgp.flyingsite::lang.models.member.sensitive.unit

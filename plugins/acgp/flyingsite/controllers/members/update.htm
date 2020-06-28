@@ -6,6 +6,10 @@
 <?php Block::endPut() ?>
 
 <?php if (!$this->fatalError): ?>
+    <?php
+        // Log the viewed activity here so that AJAX requests don't duplicate
+        $formModel->activity('viewed')->description('The member profile was viewed')->log();
+    ?>
 
     <?php Block::put('form-contents') ?>
         <div class="layout">

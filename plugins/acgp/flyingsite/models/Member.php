@@ -13,6 +13,11 @@ class Member extends Model
     use \October\Rain\Database\Traits\Encryptable;
 
     /**
+     * @var array Behaviors implemented by this model class
+     */
+    public $implement = ['@LukeTowers.EasyAudit.Behaviors.TrackableModel'];
+
+    /**
      * Set the soft delete column name to archived_at
      */
     const DELETED_AT = 'archived_at';
@@ -34,6 +39,7 @@ class Member extends Model
         'given_names'         => 'required',
         'surname'             => 'required',
         'type'                => 'required',
+        'element'             => 'required',
         'rank'                => 'required',
         'sensitive_data.unit' => 'required',
         'sensitive_data.sn'   => 'required_if:type,coats,ci,regf,resf',
@@ -48,8 +54,20 @@ class Member extends Model
     protected $encryptable = ['contact_data', 'sensitive_data'];
 
     /**
+     * @var array The model events that are to be tracked as activities
+     */
+    public $trackableEvents = [
+        'model.afterUpdate' => ['name' => 'updated', 'description' => 'The member profile was updated'],
+        'model.afterCreate' => ['name' => 'created', 'description' => 'The member profile was created'],
+        'model.afterDelete' => ['name' => 'archived', 'description' => 'The member profile was archived'],
+    ];
+
+    /**
      * Relations
      */
+    public $attachOne = [
+        'picture' => [\System\Models\File::class, ['public' => false]],
+    ];
     public $hasOne = [
         'pen_form' => [PenForm::class],
     ];
@@ -124,5 +142,18 @@ class Member extends Model
     public function getRankCleanAttribute()
     {
         return Lang::get("acgp.flyingsite::lang.models.member.rank.{$this->rank}");
+    }
+
+    /**
+     * Accessor for full name which includes first_name and last_name
+     * @return string first_name [space] last_name
+     */
+    public function getFullNameAttribute()
+    {
+        return $this->given_names . ' ' . $this->surname;
+    }
+    public function getNameAttribute()
+    {
+        return $this->full_name;
     }
 }

@@ -48,6 +48,7 @@
         'member' => [
             'label'        => 'Member',
             'label_plural' => 'Members',
+            'picture'      => 'Picture',
             'surname'      => 'Surname',
             'given_names'  => 'Given Name(s)',
             'dob'          => 'Date of Birth',
@@ -96,6 +97,12 @@
                 'ci'       => 'Civilian Instructor',
                 'regf'     => 'Regular Force',
                 'resf'     => 'Reserves',
+            ],
+            'element' => [
+                'label'    => 'Element',
+                'air'      => 'Air',
+                'army'     => 'Army',
+                'sea'      => 'Sea',
             ],
             'rank'      => [
                 'label'    => 'Rank',

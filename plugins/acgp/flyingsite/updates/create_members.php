@@ -15,6 +15,7 @@ class CreateMembers extends Migration
             $table->string('surname');
             $table->string('given_names');
             $table->string('type');
+            $table->string('element')->default('air');
             $table->string('rank')->nullable();
             $table->date('date_of_birth')->nullable();
             $table->mediumtext('contact_data')->nullable();

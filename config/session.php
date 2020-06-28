@@ -64,9 +64,9 @@ return [
     | Session Database Connection
     |--------------------------------------------------------------------------
     |
-    | When using the "database" session driver, you may specify the database
-    | connection that should be used to manage your sessions. This should
-    | correspond to a connection in your "database" configuration file.
+    | When using the "database" or "redis" session drivers, you may specify a
+    | connection that should be used to manage these sessions. This should
+    | correspond to a connection in your database configuration options.
     |
     */
 
@@ -139,6 +139,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | HTTP Access Only
+    |--------------------------------------------------------------------------
+    |
+    | Setting this value to true will prevent JavaScript from accessing the
+    | value of the cookie and the cookie will only be accessible through
+    | the HTTP protocol. You are free to modify this option if needed.
+    |
+    */
+    
+    'http_only' => true,
+
+    /*
+    |--------------------------------------------------------------------------
     | HTTPS Only Cookies
     |--------------------------------------------------------------------------
     |
@@ -149,5 +162,24 @@ return [
     */
 
     'secure' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Same-Site Cookies
+    |--------------------------------------------------------------------------
+    |
+    | This option determines how your cookies behave when cross-site requests
+    | take place, and can be used to mitigate CSRF attacks. By default, we
+    | do not enable this as other CSRF protection services are in place.
+    |
+    | In the strict mode, the cookie is not sent with any cross-site usage
+    | even if the user follows a link to another website. Lax cookies are
+    | only sent with a top-level get request.
+    |
+    | Supported: "lax", "strict"
+    |
+    */
+
+    'same_site' => null,
 
 ];

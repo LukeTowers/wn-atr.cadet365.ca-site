@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'noreply@cadetflying.site', 'name' => 'No Reply (Cadet Flying Site)'],
+    'from' => ['address' => 'noreply@mail.cadetflying.site', 'name' => 'Flying Fortress - NO REPLY'],
 
     /*
     |--------------------------------------------------------------------------

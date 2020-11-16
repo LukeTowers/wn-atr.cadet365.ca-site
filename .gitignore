@@ -34,3 +34,4 @@ plugins/rainlab
 plugins/luketowers/easyaudit
 plugins/luketowers/pwnedpasswords
 plugins/luketowers/sentry
+plugins/martin/ssologin

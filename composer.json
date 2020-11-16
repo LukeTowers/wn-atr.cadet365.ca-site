@@ -9,6 +9,12 @@
             "email": "luke.towers@cadets.gc.ca"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mcaskill/composer-merge-plugin"
+        }
+    ],
     "require": {
         "php": "^7.2",
         "october/rain": "dev-develop as 1.1",
@@ -16,13 +22,14 @@
         "october/backend": "dev-develop",
         "october/cms": "dev-develop",
         "laravel/framework": "~6.0",
-        "wikimedia/composer-merge-plugin": "1.4.1",
+        "wikimedia/composer-merge-plugin": "dev-feature/composer-v2",
 
         "luketowers/oc-sentry-plugin": "dev-master",
         "luketowers/oc-easyaudit-plugin": "dev-master",
         "luketowers/oc-pwnedpasswords-plugin": "dev-master",
 
-        "rainlab/location-plugin": "dev-master"
+        "rainlab/location-plugin": "dev-master",
+        "martin/ssologin-plugin": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^8.0|^9.0",

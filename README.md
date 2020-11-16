@@ -1,6 +1,6 @@
 # About
 
-Repository for the OctoberCMS-powered CadetFlying.Site.
+Repository for the October CMS powered CadetFlying.Site.
 Active development in develop branch; features in feature branches.
 Develop locally using [Homestead](https://laravel.com/docs/6.x/homestead).
 Pushes to develop are automatically deployed on the [dev server](https://cadetflying.site/).

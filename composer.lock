@@ -2345,12 +2345,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/LukeTowers/oc-pwnedpasswords-plugin.git",
-                "reference": "24865b3298f98e628747af9835023a3070ca43e3"
+                "reference": "727428dbc3656d266d2adaddf544bcb7d25618f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LukeTowers/oc-pwnedpasswords-plugin/zipball/24865b3298f98e628747af9835023a3070ca43e3",
-                "reference": "24865b3298f98e628747af9835023a3070ca43e3",
+                "url": "https://api.github.com/repos/LukeTowers/oc-pwnedpasswords-plugin/zipball/727428dbc3656d266d2adaddf544bcb7d25618f9",
+                "reference": "727428dbc3656d266d2adaddf544bcb7d25618f9",
                 "shasum": ""
             },
             "require": {
@@ -2384,7 +2384,7 @@
                 "issues": "https://github.com/LukeTowers/oc-pwnedpasswords-plugin/issues",
                 "source": "https://github.com/LukeTowers/oc-pwnedpasswords-plugin/tree/master"
             },
-            "time": "2020-10-15T17:11:43+00:00"
+            "time": "2020-11-16T10:26:30+00:00"
         },
         {
             "name": "luketowers/oc-sentry-plugin",

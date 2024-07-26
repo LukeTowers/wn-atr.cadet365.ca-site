@@ -46,4 +46,7 @@ See [.scripts/deploy.sh](.scripts/deploy.sh) for the deployment script.
 - Add signup form to login page
 - Add admin account to live site
 - Implement main data models & forms
+- Implement main roles & permissions
+- User / Member factories to populate the system with testing data
+- Setup Sentry
 - Timesheet app data import (sqlite)

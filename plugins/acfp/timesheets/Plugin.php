@@ -2,7 +2,7 @@
 
 namespace ACFP\Timesheets;
 
-use Backend;
+use Backend\Facades\Backend;
 use Backend\Models\UserRole;
 use System\Classes\PluginBase;
 
@@ -29,7 +29,6 @@ class Plugin extends PluginBase
      */
     public function register(): void
     {
-
     }
 
     /**
@@ -37,19 +36,6 @@ class Plugin extends PluginBase
      */
     public function boot(): void
     {
-
-    }
-
-    /**
-     * Registers any frontend components implemented in this plugin.
-     */
-    public function registerComponents(): array
-    {
-        return []; // Remove this line to activate
-
-        return [
-            \ACFP\Timesheets\Components\MyComponent::class => 'myComponent',
-        ];
     }
 
     /**

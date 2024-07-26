@@ -32,3 +32,6 @@ modules/
 # Exclude the following plugins, they'll be loaded by composer
 plugins/winter
 plugins/luketowers/easyaudit
+
+# Exclude private docs
+docs/private

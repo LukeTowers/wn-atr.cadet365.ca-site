@@ -8465,12 +8465,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wintercms/wn-system-module.git",
-                "reference": "b04fb553ecfd2142dff2b6a2baea5bdeaeca1798"
+                "reference": "64d164e62b1ae90f719993abe054e4da10293ac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/b04fb553ecfd2142dff2b6a2baea5bdeaeca1798",
-                "reference": "b04fb553ecfd2142dff2b6a2baea5bdeaeca1798",
+                "url": "https://api.github.com/repos/wintercms/wn-system-module/zipball/64d164e62b1ae90f719993abe054e4da10293ac2",
+                "reference": "64d164e62b1ae90f719993abe054e4da10293ac2",
                 "shasum": ""
             },
             "require": {
@@ -8530,7 +8530,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-07-24T09:54:18+00:00"
+            "time": "2024-07-26T09:01:36+00:00"
         },
         {
             "name": "winter/wn-tailwindui-plugin",

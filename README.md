@@ -39,3 +39,11 @@ The setup script should also be run after pulling down changes from the remote r
 ## Automated Deployment Script (Atomic Blue-Green deployment strategy)
 
 See [.scripts/deploy.sh](.scripts/deploy.sh) for the deployment script.
+
+## @TODO:
+
+- Update branding for login page (tagline, logo, image)
+- Add signup form to login page
+- Add admin account to live site
+- Implement main data models & forms
+- Timesheet app data import (sqlite)

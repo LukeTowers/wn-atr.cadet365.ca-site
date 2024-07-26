@@ -1,5 +1,6 @@
 <?php
 
+use Winter\Storm\Database\Schema\Blueprint;
 use Winter\Storm\Support\Facades\Schema;
 use Winter\Storm\Database\Updates\Migration;
 
@@ -7,7 +8,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('acfp_atr_members', function($table)
+        Schema::create('acfp_atr_members', function (Blueprint $table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();

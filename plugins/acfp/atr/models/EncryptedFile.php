@@ -72,7 +72,8 @@ class EncryptedFile extends \System\Models\File
     /**
      * Disable thumbs
      */
-    public function isImage() {
+    public function isImage()
+    {
         return false;
     }
 }

@@ -3,6 +3,7 @@
 namespace ACFP\ATR\Updates;
 
 use ACFP\ATR\Models\Site;
+use Winter\Storm\Database\Schema\Blueprint;
 use Winter\Storm\Database\Updates\Migration;
 use Winter\Storm\Support\Facades\Schema;
 
@@ -10,7 +11,7 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('acfp_atr_sites', function($table)
+        Schema::create('acfp_atr_sites', function (Blueprint $table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();

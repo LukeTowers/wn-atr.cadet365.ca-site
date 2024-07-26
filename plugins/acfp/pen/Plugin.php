@@ -30,14 +30,6 @@ class Plugin extends PluginBase
     }
 
     /**
-     * Register method, called when the plugin is first registered.
-     */
-    public function register(): void
-    {
-
-    }
-
-    /**
      * Boot method, called right before the request route.
      */
     public function boot(): void

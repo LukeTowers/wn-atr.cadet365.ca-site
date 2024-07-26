@@ -26,7 +26,7 @@ selenium.php
 # Exclude the symlinked public directory
 public/
 
-# Exclude the OctoberCMS module folders from being included, they're pulled in via composer
+# Exclude the Winter CMS module folders from being included, they're pulled in via composer
 modules/
 
 # Exclude the following plugins, they'll be loaded by composer

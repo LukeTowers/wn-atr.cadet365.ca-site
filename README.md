@@ -11,7 +11,7 @@ Pushes to develop are automatically deployed on the [dev server](https://atr.cad
 1. Clone the repo
 2. Copy .env.example to .env and configure accordingly (APP_URL and DB credentials)
 3. Run the local setup script
-4. Ensure that the scheduler is properly configured by following https://octobercms.com/docs/setup/installation#crontab-setup (add `* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1` to the crontab)
+4. Ensure that the scheduler is properly configured by following https://wintercms.com/docs/setup/installation#crontab-setup (add `* * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1` to the crontab)
 
 ## Setup Script
 

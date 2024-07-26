@@ -1,0 +1,124 @@
+fields:
+    given_names:
+        label: acfp.atr::lang.models.member.given_names
+        span: left
+        type: text
+    surname:
+        label: acfp.atr::lang.models.member.surname
+        span: right
+        type: text
+
+tabs:
+    defaultTab: acfp.atr::lang.models.member.tab_general
+    fields:
+        contact_data[email]:
+            label: acfp.atr::lang.models.member.contact.email
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: address@example.com
+            type: text
+            span: left
+        contact_data[phone]:
+            label: acfp.atr::lang.models.member.contact.phone
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: '1 (306) 555-5555'
+            type: text
+            span: right
+
+        _heading_address:
+            label: acfp.atr::lang.models.general.address.label
+            tab: acfp.atr::lang.models.member.contact.label
+            type: section
+        _address:
+            label: acfp.atr::lang.models.general.address.finder
+            tab: acfp.atr::lang.models.member.contact.label
+            span: full
+            type: addressfinder
+            fieldMap:
+                street: contact_data[address][line_1]
+                city: contact_data[address][city]
+                zip: contact_data[address][postalcode]
+                state: contact_data[address][province]
+                country: contact_data[address][country]
+        contact_data[address][line_1]:
+            label: acfp.atr::lang.models.general.address.line_1
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: '1 Workshop Lane'
+            type: text
+            span: full
+        contact_data[address][city]:
+            label: acfp.atr::lang.models.general.address.city
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: 'North Pole'
+            type: text
+            span: left
+        contact_data[address][postalcode]:
+            label: acfp.atr::lang.models.general.address.postcode
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: 'H0H 0H0'
+            type: text
+            span: right
+        contact_data[address][province]:
+            label: acfp.atr::lang.models.general.address.region
+            tab: acfp.atr::lang.models.member.contact.label
+            placeholder: 'Yukon'
+            type: text
+            span: left
+        contact_data[address][country]:
+            label: acfp.atr::lang.models.general.address.country
+            tab: acfp.atr::lang.models.member.contact.label
+            type: text
+            default: Canada
+            span: right
+
+secondaryTabs:
+    fields:
+        picture:
+            label: acfp.atr::lang.models.member.picture
+            type: fileupload
+            mode: image
+            span: full
+
+        type:
+            label: acfp.atr::lang.models.member.type.label
+            type: dropdown
+            span: left
+            options:
+                cadet: acfp.atr::lang.models.member.type.cadet
+                coats: acfp.atr::lang.models.member.type.coats
+                ci: acfp.atr::lang.models.member.type.ci
+                cv: acfp.atr::lang.models.member.type.cv
+                regf: acfp.atr::lang.models.member.type.regf
+                resf: acfp.atr::lang.models.member.type.resf
+
+        element:
+            label: acfp.atr::lang.models.member.element.label
+            type: dropdown
+            span: right
+            options:
+                air: acfp.atr::lang.models.member.element.air
+                army: acfp.atr::lang.models.member.element.army
+                sea: acfp.atr::lang.models.member.element.sea
+
+        rank:
+            label: acfp.atr::lang.models.member.rank.label
+            type: dropdown
+            dependsOn:
+                - type
+                - element
+            span: full
+
+        sensitive_data[unit]:
+            label: acfp.atr::lang.models.member.sensitive.unit
+            placeholder: '#1 Best Unit RCACS'
+            type: text
+
+        sensitive_data[sn]:
+            label: acfp.atr::lang.models.member.sensitive.sn
+            placeholder: 'A12345678'
+            type: text
+
+        date_of_birth:
+            label: acfp.atr::lang.models.member.dob
+            type: datepicker
+            ignoreTimezone: true
+            mode: date

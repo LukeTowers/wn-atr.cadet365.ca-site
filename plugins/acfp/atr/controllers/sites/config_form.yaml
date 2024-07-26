@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Site
+
+# Model Form Field configuration
+form: $/acfp/atr/models/site/fields.yaml
+
+# Model Class name
+modelClass: ACFP\ATR\Models\Site
+
+# Default redirect location
+defaultRedirect: acfp/atr/sites
+
+# Create page
+create:
+    title: Create Site
+    redirect: acfp/atr/sites/update/:id
+    redirectClose: acfp/atr/sites
+
+# Update page
+update:
+    title: Edit Site
+    redirect: acfp/atr/sites
+    redirectClose: acfp/atr/sites
+
+# Preview page
+preview:
+    title: Preview Site

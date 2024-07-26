@@ -1,0 +1,23 @@
+permissions:
+    manage_members:
+        tab: 'acfp.atr::lang.plugin.name'
+        label: 'acfp.atr::lang.permissions.manage_members'
+navigation:
+    acgp-members:
+        label: 'acfp.atr::lang.models.member.label_plural'
+        url: acfp/atr/members
+        icon: icon-users
+        permissions:
+            - manage_members
+    acgp-regions:
+        label: 'acfp.atr::lang.models.region.label_plural'
+        url: acfp/atr/regions
+        icon: icon-map
+        permissions:
+            - regions.*
+    acgp-sites:
+        label: 'acfp.atr::lang.models.site.label_plural'
+        url: acfp/atr/sites
+        icon: icon-map-marker
+        permissions:
+            - sites.*

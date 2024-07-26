@@ -30,8 +30,5 @@ public/
 modules/
 
 # Exclude the following plugins, they'll be loaded by composer
-plugins/rainlab
+plugins/winter
 plugins/luketowers/easyaudit
-plugins/luketowers/pwnedpasswords
-plugins/luketowers/sentry
-plugins/martin/ssologin

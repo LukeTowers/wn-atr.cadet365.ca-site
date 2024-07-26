@@ -1,0 +1,64 @@
+columns:
+    surname:
+        label: acfp.atr::lang.models.member.surname
+        type: text
+        searchable: true
+        sortable: true
+
+    given_names:
+        label: acfp.atr::lang.models.member.given_names
+        type: text
+        searchable: true
+        sortable: true
+
+    type:
+        label: acfp.atr::lang.models.member.type.label
+        type: text
+        valueFrom: type_clean
+        searchable: true
+        sortable: true
+
+    rank:
+        label: acfp.atr::lang.models.member.rank.label
+        type: text
+        valueFrom: rank_clean
+        searchable: true
+        invisible: true
+        sortable: true
+
+    date_of_birth:
+        label: acfp.atr::lang.models.member.dob
+        type: date
+        searchable: true
+        invisible: true
+        sortable: true
+
+    site_name:
+        label: acfp.atr::lang.models.site.acronym
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        invisible: true
+        relation: site
+
+    created_at:
+        label: acfp.atr::lang.models.general.created_at
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true
+
+    updated_at:
+        label: acfp.atr::lang.models.general.updated_at
+        type: datetime
+        searchable: true
+        invisible: false
+        sortable: true
+
+    archived_at:
+        label: acfp.atr::lang.models.general.archived_at
+        type: datetime
+        searchable: true
+        invisible: true
+        sortable: true

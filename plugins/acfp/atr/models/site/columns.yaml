@@ -1,0 +1,16 @@
+columns:
+    name:
+        label: acfp.atr::lang.models.general.name
+        type: text
+        searchable: true
+        sortable: true
+    region_name:
+        label: acfp.atr::lang.models.region.label
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: region
+    code:
+        label: acfp.atr::lang.models.general.code
+        type: text

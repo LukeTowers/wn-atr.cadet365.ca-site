@@ -1,7 +1,0 @@
-columns:
-    name:
-        label: acgp.flyingsite::lang.models.general.name
-        type: text
-    code:
-        label: acgp.flyingsite::lang.models.general.code
-        type: text

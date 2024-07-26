@@ -1,0 +1,7 @@
+columns:
+    name:
+        label: acfp.atr::lang.models.general.name
+        type: text
+    code:
+        label: acfp.atr::lang.models.general.code
+        type: text

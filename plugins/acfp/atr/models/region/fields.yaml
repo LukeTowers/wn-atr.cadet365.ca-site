@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: acfp.atr::lang.models.general.name
+        type: text
+        span: left
+    code:
+        label: acfp.atr::lang.models.general.code
+        type: text
+        span: right

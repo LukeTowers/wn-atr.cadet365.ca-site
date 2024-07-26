@@ -1,0 +1,14 @@
+{
+    "name": "acfp/wn-pen-plugin",
+    "type": "winter-plugin",
+    "description": "Provides digital Personal Emergency Notification form functionality for the ACFP ATR",
+    "authors": [
+        {
+            "name": "Luke Towers",
+            "email": "luke@luketowers.ca"
+        }
+    ],
+    "require": {
+        "tmw/fpdm": "dev-master"
+    }
+}

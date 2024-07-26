@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Region
+
+# Model Form Field configuration
+form: $/acfp/atr/models/region/fields.yaml
+
+# Model Class name
+modelClass: ACFP\ATR\Models\Region
+
+# Default redirect location
+defaultRedirect: acfp/atr/regions
+
+# Create page
+create:
+    title: Create Region
+    redirect: acfp/atr/regions/update/:id
+    redirectClose: acfp/atr/regions
+
+# Update page
+update:
+    title: Edit Region
+    redirect: acfp/atr/regions
+    redirectClose: acfp/atr/regions
+
+# Preview page
+preview:
+    title: Preview Region

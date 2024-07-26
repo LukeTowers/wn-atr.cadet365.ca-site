@@ -1,0 +1,12 @@
+list: $/acfp/atr/models/member/columns.yaml
+modelClass: ACFP\ATR\Models\Member
+title: Members
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'acfp/atr/members/update/:id'

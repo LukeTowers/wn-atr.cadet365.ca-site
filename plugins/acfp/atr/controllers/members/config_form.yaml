@@ -1,0 +1,10 @@
+name: acfp.atr::lang.models.member.label
+form: $/acfp/atr/models/member/fields.yaml
+modelClass: ACFP\ATR\Models\Member
+defaultRedirect: acfp/atr/members
+create:
+    redirect: 'acfp/atr/members/update/:id'
+    redirectClose: acfp/atr/members
+update:
+    redirect: acfp/atr/members
+    redirectClose: acfp/atr/members

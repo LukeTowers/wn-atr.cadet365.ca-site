@@ -1,0 +1,5 @@
+1.0.0:
+    - 'Initialize plugin.'
+    - v1.0.0/create_regions.php
+    - v1.0.0/create_sites.php
+    - v1.0.0/create_members.php

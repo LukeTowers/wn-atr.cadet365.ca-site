@@ -1,0 +1,66 @@
+fields:
+    _title:
+        label: acfp.atr::lang.models.member.contact.label
+        type: section
+    given_names:
+        label: acfp.atr::lang.models.member.given_names
+        type: text
+        span: left
+        placeholder: acfp.atr::lang.models.member.placeholder.given_names
+    surname:
+        label: acfp.atr::lang.models.member.surname
+        type: text
+        span: right
+        placeholder: acfp.atr::lang.models.member.placeholder.surname
+    honorific:
+        label: acfp.atr::lang.models.member.pen.honorific
+        type: balloon-selector
+        span: full
+        options:
+            mr: acfp.atr::lang.models.general.mr
+            mrs: acfp.atr::lang.models.general.mrs
+            miss: acfp.atr::lang.models.general.mr
+    address:
+        label: acfp.atr::lang.models.general.address.label
+        type: textarea
+        size: tiny
+        span: left
+        placeholder: acfp.atr::lang.models.member.placeholder.address
+    postcode:
+        label: acfp.atr::lang.models.general.address.postcode
+        type: text
+        span: right
+        placeholder: acfp.atr::lang.models.member.placeholder.postcode
+    relationship:
+        label: acfp.atr::lang.models.member.pen.relationship
+        type: text
+        span: left
+        placeholder: acfp.atr::lang.models.member.placeholder.relationship
+    religion:
+        label: acfp.atr::lang.models.member.pen.religion
+        span: right
+        type: text
+    home_area:
+        label: acfp.atr::lang.models.member.pen.home_area
+        type: text
+        cssClass: 'col-sm-2'
+        placeholder: 306
+        span: none
+    home_number:
+        label: acfp.atr::lang.models.member.pen.home_number
+        type: text
+        cssClass: 'col-sm-4'
+        placeholder: 555-5555
+        span: none
+    office_area:
+        label: acfp.atr::lang.models.member.pen.office_area
+        type: text
+        cssClass: 'col-sm-2'
+        placeholder: 306
+        span: none
+    office_number:
+        label: acfp.atr::lang.models.member.pen.office_number
+        type: text
+        cssClass: 'col-sm-4'
+        placeholder: 555-5555
+        span: none

@@ -1,0 +1,15 @@
+{
+    "name": "acfp/wn-atr-plugin",
+    "type": "winter-plugin",
+    "description": "Core plugin powering the Electronic Pilot Training Records Proof of Concept",
+    "homepage": "https://atr.cadet365.ca",
+    "authors": [
+        {
+            "name": "Luke Towers",
+            "email": "luke@luketowers.ca"
+        }
+    ],
+    "require": {
+        "winter/wn-location-plugin": "dev-main"
+    }
+}

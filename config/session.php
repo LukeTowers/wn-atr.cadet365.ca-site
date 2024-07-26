@@ -12,7 +12,7 @@ return [
     | you may specify any of the other wonderful drivers provided here.
     |
     | Supported: "file", "cookie", "database", "apc",
-    |            "memcached", "redis", "array"
+    |            "memcached", "redis", "dynamodb", "array"
     |
     */
 
@@ -24,13 +24,12 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the number of minutes that you wish the session
-    | to be allowed to remain idle for it is expired. If you want them
-    | to immediately expire when the browser closes, set it to zero.
+    | to be allowed to remain idle before it expires. If you want them
+    | to immediately expire on the browser closing, set that option.
     |
     */
 
-    'lifetime' => 120,
-
+    'lifetime' => env('SESSION_LIFETIME', 120),
     'expire_on_close' => false,
 
     /*
@@ -70,7 +69,7 @@ return [
     |
     */
 
-    'connection' => null,
+    'connection' => env('SESSION_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -87,6 +86,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Session Cache Store
+    |--------------------------------------------------------------------------
+    |
+    | While using one of the framework's cache driven session backends you may
+    | list a cache store that should be used for these sessions. This value
+    | must match with one of the application's configured cache "stores".
+    |
+    | Affects: "apc", "dynamodb", "memcached", "redis"
+    |
+    */
+
+    'store' => env('SESSION_STORE'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Session Sweeping Lottery
     |--------------------------------------------------------------------------
     |
@@ -96,7 +110,10 @@ return [
     |
     */
 
-    'lottery' => [2, 100],
+    'lottery' => [
+        2,
+        100,
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +126,7 @@ return [
     |
     */
 
-    'cookie' => 'october_session',
+    'cookie' => env('SESSION_COOKIE', str_slug(env('APP_NAME', 'winter'), '_') . '_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -135,7 +152,7 @@ return [
     |
     */
 
-    'domain' => null,
+    'domain' => env('SESSION_DOMAIN'),
 
     /*
     |--------------------------------------------------------------------------
@@ -147,7 +164,7 @@ return [
     | the HTTP protocol. You are free to modify this option if needed.
     |
     */
-    
+
     'http_only' => true,
 
     /*
@@ -157,11 +174,11 @@ return [
     |
     | By setting this option to true, session cookies will only be sent back
     | to the server if the browser has a HTTPS connection. This will keep
-    | the cookie from being sent to you if it can not be done securely.
+    | the cookie from being sent to you when it can't be done securely.
     |
     */
 
-    'secure' => false,
+    'secure' => env('SESSION_SECURE_COOKIE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -170,16 +187,30 @@ return [
     |
     | This option determines how your cookies behave when cross-site requests
     | take place, and can be used to mitigate CSRF attacks. By default, we
-    | do not enable this as other CSRF protection services are in place.
+    | will set this value to "lax" since this is a secure default value.
     |
-    | In the strict mode, the cookie is not sent with any cross-site usage
-    | even if the user follows a link to another website. Lax cookies are
-    | only sent with a top-level get request.
+    | Cookies that match the domain of the current site, i.e. what's displayed
+    | in the browser's address bar, are referred to as first-party cookies.
+    | Similarly, cookies from domains other than the current site are referred
+    | to as third-party cookies.
     |
-    | Supported: "lax", "strict"
+    | Cookies without a SameSite attribute will be treated as `SameSite=lax`,
+    | meaning the default behaviour will be to restrict cookies to first party
+    | contexts only.
+    |
+    | Cookies for cross-site usage must specify `same_site` as 'None' and `secure`
+    | as `true` to work correctly.
+    |
+    | lax - Cookies are allowed to be sent with top-level navigations and will
+    | be sent along with GET request initiated by third party website.
+    | This is the default value in modern browsers.
+    |
+    | strict - Cookies will only be sent in a first-party context and not be
+    | sent along with requests initiated by third party websites.
+    |
+    | Supported: "lax", "strict", "none", null
     |
     */
 
-    'same_site' => null,
-
+    'same_site' => 'lax',
 ];

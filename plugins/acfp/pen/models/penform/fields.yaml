@@ -1,0 +1,85 @@
+fields:
+    _section_nok:
+        label: acfp.pen::lang.models.member.pen.nok
+        type: section
+    sensitive_data[pen][nok]:
+        label: ''
+        type: repeater
+        form: $/acfp/pen/models/pen/fields.pen_contact.yaml
+        prompt: acfp.pen::lang.models.member.pen.add_nok
+        minItems: 2
+        maxItems: 2
+
+    _section_pen_contact:
+        label: acfp.pen::lang.models.member.pen.pen_contact
+        type: section
+    sensitive_data[pen][pen_contact_choice]:
+        label: ''
+        commentAbove: acfp.pen::lang.models.member.pen.pen_contact_desc
+        type: radio
+        span: left
+        options:
+            same_1: acfp.pen::lang.models.member.pen.same_1
+            same_2: acfp.pen::lang.models.member.pen.same_2
+            or: acfp.pen::lang.models.member.pen.or
+    sensitive_data[pen][pen_contact]:
+        label: ''
+        type: repeater
+        form: $/acfp/pen/models/pen/fields.pen_contact.yaml
+        prompt: acfp.pen::lang.models.member.pen.add_pen_contact
+        maxItems: 1
+        minItems: 1
+        trigger:
+            action: show
+            field: sensitive_data[pen][pen_contact_choice]
+            condition: value[or]
+
+    _section_authorized_contact:
+        label: acfp.pen::lang.models.member.pen.authorized_contact
+        type: section
+    sensitive_data[pen][authorized_contact_choice]:
+        label: ''
+        commentAbove: acfp.pen::lang.models.member.pen.authorized_contact_desc
+        type: checkboxlist
+        span: left
+        cssClass: 'inline-options'
+        options:
+            same_1: acfp.pen::lang.models.member.pen.same_1
+            same_2: acfp.pen::lang.models.member.pen.same_2
+            same_3: acfp.pen::lang.models.member.pen.same_3
+    sensitive_data[pen][authorized_contact_choice_or_and]:
+        label: ''
+        type: radio
+        span: right
+        options:
+            or: acfp.pen::lang.models.member.pen.or
+            and: acfp.pen::lang.models.member.pen.and
+    sensitive_data[pen][authorized_contact]:
+        label: ''
+        type: repeater
+        form: $/acfp/pen/models/pen/fields.pen_contact.yaml
+        prompt: acfp.pen::lang.models.member.pen.add_authorized_contact
+        maxItems: 1
+        trigger:
+            action: show
+            field: sensitive_data[pen][authorized_contact_choice_or_and]
+            condition: checked
+
+    _section_authorization:
+        label: acfp.pen::lang.models.member.pen.authorization_section
+        type: section
+    sensitive_data[pen][authority_to_release]:
+        label: acfp.pen::lang.models.member.pen.authority_to_release
+        type: switch
+        span: full
+        on: acfp.pen::lang.models.general.yes
+        off: acfp.pen::lang.models.general.no
+
+    _section_remarks:
+        label: acfp.pen::lang.models.member.pen.remarks
+        type: section
+    sensitive_data[pen][remarks]:
+        label: ''
+        type: textarea
+        size: tiny
+        span: full

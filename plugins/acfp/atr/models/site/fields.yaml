@@ -1,0 +1,13 @@
+fields:
+    name:
+        label: acfp.atr::lang.models.general.name
+        type: text
+        span: left
+    code:
+        label: acfp.atr::lang.models.general.code
+        type: text
+        span: right
+    region:
+        label: acfp.atr::lang.models.region.label
+        type: relation
+        span: full
